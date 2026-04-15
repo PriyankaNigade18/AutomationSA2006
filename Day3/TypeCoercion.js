@@ -25,7 +25,7 @@ It is manual conversion
 
     Truthy
     -------------
-    any true value in boolena context refer as truthy value
+    any true value in boolean context refer as truthy value
     Eg: any non zero number and not empty string
 
     Falsy
@@ -143,7 +143,46 @@ if(amount < 10000)
 console.log("-----------------");
 //number---->String
 
-//boolean conversion
+let marks=90;
+console.log(typeof marks);//number
+//number to string: String()
+let numTostring=String(marks);
+console.log(numTostring);//"90"
+console.log(typeof numTostring);//string
+
+/*boolean conversion
+====================
+    Truthy vs falsy values
+
+    Truthy
+    -------------
+    any true value in boolean context refer as truthy value
+    Eg: any non zero number and not empty string
+
+    Falsy
+    ---------------
+    Any false value in boolean context refer as falsy value
+    5 falsy values are there in Js
+
+    Eg:0,"",NaN,undefined,null 
+
+*/
+
+console.log(Boolean(-190));//true
+console.log(Boolean("Poonam"));//true
+console.log(Boolean(90));//true
+console.log(Boolean(89.67));//true
+console.log(Boolean('p'));//true
+console.log(Boolean(" "));//true
+
+
+console.log('----------------');
+console.log(Boolean(0));
+console.log(Boolean(""));//empty string-false
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
 
 
 
