@@ -13,6 +13,7 @@ cy.visit("url");
 describe("This is suite1",()=>{
 
 //testcase
+
 it("This is testcase1",()=>{
 
 cy.visit("https://www.google.com");
