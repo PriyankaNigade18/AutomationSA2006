@@ -20,10 +20,10 @@ describe("This is for launch pf applications",()=>{
         cy.visit("https://www.google.com");
         cy.log("Google Page launch...");
         let appTitle=cy.title();
-        cy.log("Title is: "+appTitle);
+        cy.log("Title is: "+appTitle);//[object Object]
 
          let appUrl=cy.url();
-        cy.log("Application url: "+appUrl);
+        cy.log("Application url: "+appUrl);//[object Object]
 
     })
 
@@ -32,10 +32,10 @@ describe("This is for launch pf applications",()=>{
         cy.visit("https://www.amazon.in");
         cy.log("Amazon page launch...");
         let appTitle=cy.title();
-        cy.log("Title is: "+appTitle);
+        cy.log("Title is: "+appTitle);//[object Object]
 
         let appUrl=cy.url();
-        cy.log("Application url: "+appUrl);
+        cy.log("Application url: "+appUrl);//[object Object]
     })
 
 
