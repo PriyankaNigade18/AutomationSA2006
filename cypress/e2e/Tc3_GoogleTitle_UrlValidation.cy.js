@@ -36,7 +36,7 @@ cy.title().should("eq","GoogleApp");//you will get assertion error after 4sec
 cy.log('Title validation is done!');
 })
 
-it.only("Test for Google Url",()=>{
+it("Test for Google Url",()=>{
     //open application
     cy.visit("https://www.google.com/");
 

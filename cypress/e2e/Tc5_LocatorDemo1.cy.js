@@ -116,7 +116,7 @@ div.list-group>a:nth-child(4)
 describe("Test for Locators",()=>
 {
 
-it("Test CRM application for Login",()=>{
+it.skip("Test CRM application for Login",()=>{
 
 //open application
 cy.visit("https://automationplayground.com/crm/");
@@ -124,13 +124,14 @@ cy.visit("https://automationplayground.com/crm/");
 //sign in with contains():visible text
 //cy.contains("Sign In").click();
 
+cy.screenshot("HomePage");
 //signi using id id="SignIn": cssSelector with id
 cy.get("#SignIn").click();
 
 //assertion title
 cy.title().should("include","Login");
 cy.log("User navigated to login page");
-
+cy.screenshot("LoginPage")
 
 //email : cssselector with id
 cy.get("#email-id").type("test@gmail.com");
@@ -151,9 +152,11 @@ cy.wait(2000);//2sec
 //uncheck
 cy.get("#remember").uncheck();
 
+cy.screenshot("FillForm");
 //submit button:cssSelector with classname
 cy.get("button.btn.btn-default.btn-primary").click();
 
+cy.screenshot("processCompleted");
 
 })
 
@@ -161,6 +164,9 @@ cy.get("button.btn.btn-default.btn-primary").click();
 it.only("Test Cypress Signature/symbols",()=>{
 
       cy.visit("https://www.amazon.in/");
+      cy.wait(3000);
+
+      cy.screenshot("AmazonhomePage");
 
       //cy.get("#twotabsearchtextbox").type("watch");
 
